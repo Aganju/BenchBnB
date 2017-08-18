@@ -33,7 +33,7 @@ export const signup = (user) => (dispatch) => {
 
 export const logout = () => (dispatch) => {
   return APIUtil.logout()
-      .then(nullUser => dispatch(receiveCurrentUser(nullUser)),
+      .then(() => dispatch(receiveCurrentUser(null)),
         (errors) => dispatch(receiveErrors(errors))
     );
 };
