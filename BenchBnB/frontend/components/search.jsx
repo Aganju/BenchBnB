@@ -9,7 +9,7 @@ const Search = (props) => {
         fetchBenches = { props.fetchBenches }
         benches = { props.benches }
       />
-      <BenchMap/>
+      <BenchMap benches = { props.benches }/>
     </div>
   );
 };
