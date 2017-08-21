@@ -14,7 +14,10 @@ class BenchIndex extends React.Component {
     if(this.props.benches.keys){
 
       const all_benches = Object.keys(this.props.benches).map((key) =>{
-        return <BenchIndexItem bench={ this.props.benches[key] } />;
+        return <BenchIndexItem
+          key = { this.props.benches[key].id }
+           bench={ this.props.benches[key] }
+           />;
       });
 
       return <div>{ all_benches }</div>;
