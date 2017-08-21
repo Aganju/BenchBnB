@@ -28,14 +28,13 @@ class SessionForm extends React.Component {
     const form = (
         <form onSubmit={ this.handleSubmit }>
           <input type="text" id="username" onChange={ this.updateInput('username') }></input>
-          <input type="text" id="password" onChange={ this.updateInput('password') }></input>
+          <input type="password" id="password" onChange={ this.updateInput('password') }></input>
           <button>Submit</button>
         </form>
     );
     const errors = this.props.errors.map((error) => <li>{ error }</li>);
 
     if (this.props.loggedIn){
-      debugger
       return <Redirect to="/" />;
     }
 
