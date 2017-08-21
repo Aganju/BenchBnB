@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
           <button>Submit</button>
         </form>
     );
-    const errors = this.props.errors.map((error) => <li>{ error }</li>);
+    const errors = this.props.errors.map((error, idx) => <li key={idx} >{ error }</li>);
 
     if (this.props.loggedIn){
       return <Redirect to="/" />;
