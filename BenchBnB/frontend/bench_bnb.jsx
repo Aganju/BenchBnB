@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as Actions from './actions/session_actions';
+import * as Actions from './actions/bench_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 

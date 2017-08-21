@@ -6,10 +6,6 @@ class BenchIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
-    this.props.fetchBenches();
-  }
-
   render(){
     if(this.props.benches.keys){
 

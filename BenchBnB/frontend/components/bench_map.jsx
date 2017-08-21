@@ -18,6 +18,13 @@ export default class BenchMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
+
+    this.map.addListener('idle', () => {
+      const rawBounds = this.map.getBounds();
+      bounds = { 'northEast': rawBounds.getNorthEast,
+                 'southWest': rawBounds.getSouthWest };
+      this.props.updateBounds({ bounds });
+    });
     this.MarkerManager.updateMarkers();
   }
 

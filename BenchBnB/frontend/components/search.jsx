@@ -6,10 +6,12 @@ const Search = (props) => {
   return (
     <div>
       <BenchIndex
-        fetchBenches = { props.fetchBenches }
         benches = { props.benches }
       />
-      <BenchMap benches = { props.benches }/>
+      <BenchMap
+        benches = { props.benches }
+        updateBounds = { props.updateBounds }
+      />
     </div>
   );
 };
